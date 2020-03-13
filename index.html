@@ -1,24 +1,23 @@
-<!DOCTYPE html>
-<html lang="eng" dir="ltr">
-
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="utf-8">
-<title>First AFrame Demo</title>
-
-  </head>
-  <script src="https://aframe.io/releases/1.0.3/aframe.min.js"> </script>
-
+<meta charset="utf-8">
+<title>A-Frame environment test</title>
+</head>
+<script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+ 
 <body>
-
-<a-scene> 
-  
-  <a-cylinder id="ground" src="https://cdn.aframe.io/a-painter/images/floor.jpg">  </a-cylinder>
-  
-  </a-scene>
-  
-  
+ 
+<a-scene>
+ 
+<a-assets>
+<img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+<img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg">
+</a-assets>
+ 
+<a-cylinder id="ground" src="#groundTexture" radius="30" height="0.1"></a-cylinder>
+ 
+<a-sky id="background" src="#skyTexture" theta-length="90" radius="30"></a-sky>
+ 
+</a-scene>
 </body>
-  
-  
-  
 </html>
